@@ -6,7 +6,7 @@ DynamicTransformPublisher::DynamicTransformPublisher(): nh_(),  pnh_("~"){
     // initPubSubSrv();
 
     //Timers
-    ros::Timer tf_timer = pnh_.createTimer(ros::Duration(1/publish_frequency_), &DynamicTransformPublisher::publishTransformTimerCB, this);
+    tf_timer_ = pnh_.createTimer(ros::Duration(1/publish_frequency_), &DynamicTransformPublisher::publishTransformTimerCB, this);
 }
 
 DynamicTransformPublisher::~DynamicTransformPublisher(){

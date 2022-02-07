@@ -17,7 +17,7 @@ class DynamicTransformPublisher{
     private:
         ros::NodeHandle nh_, pnh_;
 
-        ros::Timer lookup_tf_timer_; //Timer for publishing queue
+        ros::Timer tf_timer_;
 
         ///////////////////////////
         //ROSParams
