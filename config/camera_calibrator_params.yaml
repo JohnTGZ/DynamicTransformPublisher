@@ -1,0 +1,12 @@
+#Bundle of april tags to track
+#Example input: 
+#1) Single tags "[2]"
+#2) Multiple tags "[5, 14, 23]"
+
+apriltag_id_array : "[0]" 
+parent_frame: "april_tag"
+child_frame: "rgbd_SL_color_optical_frame"
+
+#UNUSED PARAMS (To be deprecated)
+# target_lookup_frame: "rgbd_SL_link"
+# source_lookup_frame: "base_link"

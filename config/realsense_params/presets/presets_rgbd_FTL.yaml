@@ -1,0 +1,65 @@
+usb_port_id          :  ""
+device_type          :  ""
+rosbag_filename      :  ""
+
+depth_width          : 848 #848 #848 #480 #1280
+depth_height         : 480 #480 #480 #270 #720 
+enable_depth         : true
+
+infra_width          : 848 #640 #480 #1280
+infra_height         : 480 #480 #270 #720 
+enable_infra         : false
+enable_infra1        : false
+enable_infra2        : false
+infra_rgb            : false 
+
+color_width          : 640 #480 
+color_height         : 480 #270 
+enable_color         : true 
+
+# fps can only take values 6, 15, 30
+depth_fps            : 30
+infra_fps            : 30 
+color_fps            : 6
+enable_gyro          : false 
+enable_accel         : false 
+enable_pose          : false 
+
+# fisheye_width        : 0
+# fisheye_height       : 0 
+enable_fisheye       : false 
+enable_fisheye1      : false 
+enable_fisheye2      : false 
+
+# confidence_width     : 640
+# confidence_height    : 580
+enable_confidence    : false
+# confidence_fps       : -1 
+
+enable_pointcloud          : true
+pointcloud_texture_stream  : RS2_STREAM_COLOR #RS2_STREAM_ANY #RS2_STREAM_COLOR #RS2_STREAM_INFRARED 
+pointcloud_texture_index   : 0 
+allow_no_texture_points    : true #Will simply have depth points with no color
+ordered_pc                 : false #enabling this will slow down filtering with pcl
+
+enable_sync                : false
+align_depth                : false
+
+publish_tf                 : true 
+tf_publish_rate            : 0 
+
+# #https://dev.intelrealsense.com/docs/post-processing-filters
+# #colorizer, pointcloud, hdr_merge, disparity, spatial, temporal, hole_filling, decimation
+filters                    : "temporal,decimation"
+# filters                    : ""
+
+# #remove from the depth image all values above a given value (meters)
+clip_distance              : 4.5
+# linear_accel_cov           : 0.01 
+# unite_imu_method           : "none"
+calib_odom_file            : ""
+publish_odom_tf            : false
+
+
+
+

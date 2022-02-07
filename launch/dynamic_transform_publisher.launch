@@ -1,0 +1,14 @@
+<launch>
+    <node pkg="dynamic_transform_publisher" type="dynamic_transform_publisher" name="dyn_tf" output = "screen" >
+        <param name="parent_frame" value="$(arg camera1)_color_optical_frame"/>
+        <param name="child_frame" value="$(arg camera1)_rot_link"/>
+        <param name="rotation_method"       value="1"/>
+        <rosparam param="translation">      [0.0, 0.0, 0.0] </rosparam>
+        <rosparam param="quat_orientation"> [0.0, 0.0, 0.0, 1.0] </rosparam>
+        <rosparam param="rot_orientation">  [0.0, 0.0, 0.0] </rosparam>
+    </node> 
+
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+        args="-d $(find dynamic_transform_publisher)/rviz/dynamic_transform_publisher.rviz"/>
+
+</launch>
